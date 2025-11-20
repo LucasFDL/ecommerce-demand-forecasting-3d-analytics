@@ -8,3 +8,6 @@ statsmodels
 jupyter
 ipykernel
 python-dotenv
+pre-commit
+black
+isort
