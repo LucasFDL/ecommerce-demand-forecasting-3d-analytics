@@ -1,6 +1,8 @@
 from pathlib import Path
+
 import pandas as pd
-from src.config import RAW_DATA_DIR, PROCESSED_DATA_DIR
+
+from src.config import PROCESSED_DATA_DIR, RAW_DATA_DIR
 
 
 def load_raw_data(filename: str) -> pd.DataFrame:

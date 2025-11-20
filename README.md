@@ -110,7 +110,7 @@ Planned structure (may evolve as the project grows):
 ## 🚀 How to Run (work in progress)
 
 1. **Clone this repository**
-   
+
 ```bash
 git clone [https://github.com/LucasFDL/ecommerce-demand-forecasting-3d-analytics.git](https://github.com/LucasFDL/ecommerce-demand-forecasting-3d-analytics.git)
 cd ecommerce-demand-forecasting-3d-analytics
@@ -149,12 +149,12 @@ jupyter notebook
 
 ## ✅ Status & Next Steps
 
-- [x] Create repository and initial README  
-- [ ] Choose dataset and describe it in the **Dataset** section  
-- [ ] Set up `requirements.txt` and initial folder structure  
-- [ ] Implement and document EDA (`notebooks/01_eda.ipynb`)  
-- [ ] Implement forecasting models and backtesting (`notebooks/02_modeling_forecast.ipynb`)  
-- [ ] Build dashboard and add screenshots to `reports/` and this README  
+- [x] Create repository and initial README
+- [ ] Choose dataset and describe it in the **Dataset** section
+- [ ] Set up `requirements.txt` and initial folder structure
+- [ ] Implement and document EDA (`notebooks/01_eda.ipynb`)
+- [ ] Implement forecasting models and backtesting (`notebooks/02_modeling_forecast.ipynb`)
+- [ ] Build dashboard and add screenshots to `reports/` and this README
 
 ---
 
@@ -287,7 +287,7 @@ Estrutura planejada (pode evoluir conforme o projeto cresce):
 ## 🚀 Como Executar (em andamento)
 
 1. **Clonar este repositório**
-   
+
 ```bash
 git clone [https://github.com/LucasFDL/ecommerce-demand-forecasting-3d-analytics.git](https://github.com/LucasFDL/ecommerce-demand-forecasting-3d-analytics.git)
 cd ecommerce-demand-forecasting-3d-analytics
@@ -326,11 +326,11 @@ jupyter notebook
 
 ## ✅ Status e Próximos Passos
 
-- [x] Criar repositório e README inicial  
-- [ ] Escolher dataset e descrevê-lo na seção **Dataset** - [ ] Configurar `requirements.txt` e estrutura inicial de pastas  
-- [ ] Implementar e documentar EDA (`notebooks/01_eda.ipynb`)  
-- [ ] Implementar modelos de previsão e backtesting (`notebooks/02_modeling_forecast.ipynb`)  
-- [ ] Construir dashboard e adicionar screenshots em `reports/` e neste README  
+- [x] Criar repositório e README inicial
+- [ ] Escolher dataset e descrevê-lo na seção **Dataset** - [ ] Configurar `requirements.txt` e estrutura inicial de pastas
+- [ ] Implementar e documentar EDA (`notebooks/01_eda.ipynb`)
+- [ ] Implementar modelos de previsão e backtesting (`notebooks/02_modeling_forecast.ipynb`)
+- [ ] Construir dashboard e adicionar screenshots em `reports/` e neste README
 
 ---
 
