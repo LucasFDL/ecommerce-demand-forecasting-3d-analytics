@@ -76,7 +76,7 @@ Planned structure (may evolve as the project grows):
 
 ---
 
-## 🔍 Work Plan (high-level)
+## 🔍 Work Plan
 
 1. **Data Collection & Preparation**
    - Select a public e-commerce dataset
@@ -177,7 +177,7 @@ Suggestions, ideas or feedback are welcome:
 
 <br>
 
-# 🇧🇷 Previsão de Demanda E-commerce com Analytics 3D
+# Previsão de Demanda E-commerce com Analytics 3D
 
 > **Status:** Planejamento / desenvolvimento inicial 🚧
 
@@ -253,7 +253,7 @@ Estrutura planejada (pode evoluir conforme o projeto cresce):
 
 ---
 
-## 🔍 Plano de Trabalho (Alto Nível)
+## 🔍 Plano de Trabalho
 
 1. **Coleta e Preparação de Dados**
    - Selecionar um dataset público de e-commerce
