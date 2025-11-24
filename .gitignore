@@ -14,6 +14,7 @@ build/
 venv/
 env/
 .env/
+.env.*
 
 # Jupyter
 .ipynb_checkpoints/
@@ -25,6 +26,7 @@ env/
 
 # Local data (não versionar dados brutos/processados)
 data/raw/*
+data/processed/*
 notebooks/data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
