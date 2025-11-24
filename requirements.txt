@@ -1,3 +1,5 @@
+# Dependências principais do projeto P1
+
 pandas
 numpy
 matplotlib
@@ -8,7 +10,4 @@ statsmodels
 jupyter
 ipykernel
 python-dotenv
-pre-commit
-black
-isort
 kaggle

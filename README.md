@@ -10,7 +10,8 @@ Forecasting e-commerce demand per category/SKU using real-world-like data, with 
 
 ## 📌 Project Overview
 
-**Goal** Analyze e-commerce sales data to understand **purchase patterns** and build a **demand forecasting model** (per category/SKU) with proper **backtesting** and **business-oriented metrics**.
+**Goal**
+Analyze e-commerce sales data to understand **purchase patterns** and build a **demand forecasting model** (per category/SKU) with proper **backtesting** and **business-oriented metrics**.
 
 **Key outputs**
 
@@ -40,39 +41,45 @@ Once defined, this section will include:
 
 ## 🗂 Repository Structure
 
-Planned structure (may evolve as the project grows):
+Current structure (will evolve as the project grows):
 
-```text
-.
-├── data
-│   ├── raw/          # Original datasets (not tracked in Git if sensitive/large)
-│   └── processed/    # Cleaned / feature-engineered data
-├── notebooks
-│   ├── 01_eda.ipynb               # Exploratory data analysis
-│   └── 02_modeling_forecast.ipynb # Modeling and backtesting
-├── src
-│   ├── data_prep.py               # Data cleaning and feature engineering
-│   ├── models.py                  # Forecasting models and evaluation
-│   └── viz.py                     # Plotly visualizations (2D/3D)
-├── reports
-│   └── figures/                   # Saved plots (PNG/HTML)
-├── dashboard
-│   └── ...                        # Power BI / Plotly dashboard files
-├── requirements.txt
-└── README.md
-```
+    .
+    ├── data
+    │   ├── raw/                           # Original datasets (not tracked in Git)
+    │   └── processed/                     # Cleaned / transformed data (not tracked in Git)
+    ├── notebooks
+    │   ├── 00_smoke_tests.ipynb           # Environment / smoke tests
+    │   └── 01_data_overview_and_eda.ipynb # Initial data overview and EDA
+    ├── scripts
+    │   └── run_all.py                     # Stub to run the full pipeline (to be implemented)
+    ├── src
+    │   ├── data/
+    │   │   ├── __init__.py
+    │   │   ├── config.py                  # Central config (paths, constants, etc.)
+    │   │   ├── load.py                    # Data loading helpers
+    │   │   └── preprocess.py              # Cleaning & feature engineering helpers
+    │   └── _template/
+    │       └── script_template.py         # Template for new Python scripts
+    ├── reports/                           # Analysis outputs (figures, exports)
+    ├── dashboard/                         # BI / dashboard files (Power BI / Plotly)
+    ├── .env.example                       # Example environment variables (copy to .env)
+    ├── requirements.txt                   # Main project dependencies
+    ├── requirements-dev.txt               # Dev tools (pre-commit, black, isort)
+    └── README.md
 
-> ⚠️ `data/raw` and `data/processed` should be documented, and large/sensitive files should not be committed directly to Git.
+> Additional notebooks and modules will be added as the project evolves
+> (e.g. `notebooks/02_modeling_forecast.ipynb`, extra model/evaluation utilities, etc.).
 
 ---
 
 ## 🧰 Tech Stack
 
-- **Python** (Pandas, NumPy, Scikit-learn, Plotly)
+- **Python** (Pandas, NumPy, Scikit-learn, Statsmodels, Plotly)
 - **Time-series & forecasting** (baseline models, optionally LightGBM/XGBoost/Prophet)
 - **Jupyter Notebook**
 - **Power BI / Plotly** for dashboards
 - **Git & GitHub** for version control
+- **pre-commit, black, isort** for code quality
 
 ---
 
@@ -111,38 +118,38 @@ Planned structure (may evolve as the project grows):
 
 1. **Clone this repository**
 
-```bash
-git clone [https://github.com/LucasFDL/ecommerce-demand-forecasting-3d-analytics.git](https://github.com/LucasFDL/ecommerce-demand-forecasting-3d-analytics.git)
-cd ecommerce-demand-forecasting-3d-analytics
-```
+       git clone https://github.com/LucasFDL/ecommerce-demand-forecasting-3d-analytics.git
+       cd ecommerce-demand-forecasting-3d-analytics
 
 2. **Create a virtual environment**
 
-```bash
-python -m venv .venv
-```
+       python -m venv .venv
 
 3. **Activate the virtual environment**
 
-**On Windows:**
-```bash
-.venv\Scripts\activate
-```
+   **On Windows:**
 
-**On Linux/macOS:**
-```bash
-source .venv/bin/activate
-```
+       .\.venv\Scripts\activate
+
+   **On Linux/macOS:**
+
+       source .venv/bin/activate
 
 4. **Install dependencies**
-```bash
-pip install -r requirements.txt
-```
 
-5. **Open the notebooks**
-```bash
-jupyter notebook
-```
+       pip install -r requirements.txt
+       pip install -r requirements-dev.txt    # optional (dev tools)
+       pre-commit install                     # set up Git hooks
+
+5. **(Optional) Configure environment variables**
+
+       # Copy .env.example to .env (via Explorer or command line)
+       # and edit .env with the required values
+
+6. **Open the notebooks**
+
+       jupyter notebook
+
 > This section will be updated as the project evolves (specific commands, scripts, and environment details).
 
 ---
@@ -150,9 +157,9 @@ jupyter notebook
 ## ✅ Status & Next Steps
 
 - [x] Create repository and initial README
+- [x] Set up `requirements.txt` and initial folder structure
 - [ ] Choose dataset and describe it in the **Dataset** section
-- [ ] Set up `requirements.txt` and initial folder structure
-- [ ] Implement and document EDA (`notebooks/01_eda.ipynb`)
+- [ ] Implement and document EDA (`notebooks/01_data_overview_and_eda.ipynb`)
 - [ ] Implement forecasting models and backtesting (`notebooks/02_modeling_forecast.ipynb`)
 - [ ] Build dashboard and add screenshots to `reports/` and this README
 
@@ -187,7 +194,8 @@ Previsão de demanda de e-commerce por categoria/SKU utilizando dados realistas,
 
 ## 📌 Visão Geral do Projeto
 
-**Objetivo** Analisar dados de vendas de e-commerce para entender **padrões de compra** e construir um **modelo de previsão de demanda** (por categoria/SKU) com **backtesting** adequado e **métricas orientadas a negócios**.
+**Objetivo**
+Analisar dados de vendas de e-commerce para entender **padrões de compra** e construir um **modelo de previsão de demanda** (por categoria/SKU) com **backtesting** adequado e **métricas orientadas a negócios**.
 
 **Principais entregas**
 
@@ -217,39 +225,45 @@ Assim que definido, esta seção incluirá:
 
 ## 🗂 Estrutura do Repositório
 
-Estrutura planejada (pode evoluir conforme o projeto cresce):
+Estrutura atual (pode evoluir conforme o projeto cresce):
 
-```text
-.
-├── data
-│   ├── raw/          # Datasets originais (não rastreados no Git se sensíveis/grandes)
-│   └── processed/    # Dados limpos / feature engineering
-├── notebooks
-│   ├── 01_eda.ipynb               # Análise exploratória de dados
-│   └── 02_modeling_forecast.ipynb # Modelagem e backtesting
-├── src
-│   ├── data_prep.py               # Limpeza de dados e feature engineering
-│   ├── models.py                  # Modelos de previsão e avaliação
-│   └── viz.py                     # Visualizações Plotly (2D/3D)
-├── reports
-│   └── figures/                   # Gráficos salvos (PNG/HTML)
-├── dashboard
-│   └── ...                        # Arquivos do dashboard Power BI / Plotly
-├── requirements.txt
-└── README.md
-```
+    .
+    ├── data
+    │   ├── raw/                           # Datasets originais (não rastreados no Git)
+    │   └── processed/                     # Dados limpos / transformados (não rastreados no Git)
+    ├── notebooks
+    │   ├── 00_smoke_tests.ipynb           # Testes de ambiente / fumaça
+    │   └── 01_data_overview_and_eda.ipynb # Visão geral inicial dos dados e EDA
+    ├── scripts
+    │   └── run_all.py                     # Stub para rodar o pipeline completo (a ser implementado)
+    ├── src
+    │   ├── data/
+    │   │   ├── __init__.py
+    │   │   ├── config.py                  # Configuração central (paths, constantes, etc.)
+    │   │   ├── load.py                    # Funções de carregamento de dados
+    │   │   └── preprocess.py              # Funções de limpeza e feature engineering
+    │   └── _template/
+    │       └── script_template.py         # Template para novos scripts Python
+    ├── reports/                           # Saídas de análises (gráficos, exports)
+    ├── dashboard/                         # Arquivos do dashboard (Power BI / Plotly)
+    ├── .env.example                       # Exemplo de variáveis de ambiente (copiar para .env)
+    ├── requirements.txt                   # Dependências principais do projeto
+    ├── requirements-dev.txt               # Ferramentas de desenvolvimento (pre-commit, black, isort)
+    └── README.md
 
-> ⚠️ `data/raw` e `data/processed` devem ser documentados, e arquivos grandes/sensíveis não devem ser commitados diretamente no Git.
+> Novos notebooks e módulos serão adicionados conforme o projeto evolui
+> (por exemplo, `notebooks/02_modeling_forecast.ipynb`, utilitários extras de modelagem/avaliação etc.).
 
 ---
 
 ## 🧰 Tecnologias Utilizadas
 
-- **Python** (Pandas, NumPy, Scikit-learn, Plotly)
+- **Python** (Pandas, NumPy, Scikit-learn, Statsmodels, Plotly)
 - **Séries temporais e previsão** (modelos base, opcionalmente LightGBM/XGBoost/Prophet)
 - **Jupyter Notebook**
 - **Power BI / Plotly** para dashboards
 - **Git & GitHub** para controle de versão
+- **pre-commit, black, isort** para qualidade de código
 
 ---
 
@@ -288,38 +302,38 @@ Estrutura planejada (pode evoluir conforme o projeto cresce):
 
 1. **Clonar este repositório**
 
-```bash
-git clone [https://github.com/LucasFDL/ecommerce-demand-forecasting-3d-analytics.git](https://github.com/LucasFDL/ecommerce-demand-forecasting-3d-analytics.git)
-cd ecommerce-demand-forecasting-3d-analytics
-```
+       git clone https://github.com/LucasFDL/ecommerce-demand-forecasting-3d-analytics.git
+       cd ecommerce-demand-forecasting-3d-analytics
 
 2. **Criar um ambiente virtual**
 
-```bash
-python -m venv .venv
-```
+       python -m venv .venv
 
 3. **Ativar o ambiente virtual**
 
-**No Windows:**
-```bash
-.venv\Scripts\activate
-```
+   **No Windows:**
 
-**No Linux/macOS:**
-```bash
-source .venv/bin/activate
-```
+       .\.venv\Scripts\activate
+
+   **No Linux/macOS:**
+
+       source .venv/bin/activate
 
 4. **Instalar dependências**
-```bash
-pip install -r requirements.txt
-```
 
-5. **Abrir os notebooks**
-```bash
-jupyter notebook
-```
+       pip install -r requirements.txt
+       pip install -r requirements-dev.txt   # opcional (ferramentas de desenvolvimento)
+       pre-commit install                    # configurar hooks do Git
+
+5. **(Opcional) Configurar variáveis de ambiente**
+
+       # Copiar .env.example para .env (pode ser pelo Explorer ou linha de comando)
+       # e depois editar o arquivo .env com os valores necessários
+
+6. **Abrir os notebooks**
+
+       jupyter notebook
+
 > Esta seção será atualizada conforme o projeto evolui (comandos específicos, scripts e detalhes do ambiente).
 
 ---
@@ -327,8 +341,9 @@ jupyter notebook
 ## ✅ Status e Próximos Passos
 
 - [x] Criar repositório e README inicial
-- [ ] Escolher dataset e descrevê-lo na seção **Dataset** - [ ] Configurar `requirements.txt` e estrutura inicial de pastas
-- [ ] Implementar e documentar EDA (`notebooks/01_eda.ipynb`)
+- [x] Configurar `requirements.txt` e estrutura inicial de pastas
+- [ ] Escolher dataset e descrevê-lo na seção **Dataset**
+- [ ] Implementar e documentar EDA (`notebooks/01_data_overview_and_eda.ipynb`)
 - [ ] Implementar modelos de previsão e backtesting (`notebooks/02_modeling_forecast.ipynb`)
 - [ ] Construir dashboard e adicionar screenshots em `reports/` e neste README
 

@@ -1,0 +1,5 @@
+# Dependências de desenvolvimento
+
+pre-commit
+black
+isort
