@@ -1,0 +1,9 @@
+tabela,coluna,pandas_dtype,tipo_semantico,descricao,eh_chave,pct_missing,comentarios
+orders,order_id,object,id_pedido,Identificador único do pedido na base Olist.,primaria,0.0,"Usar apenas para joins e rastreio, não como feature."
+orders,customer_id,object,id_cliente,Identificador do cliente que fez o pedido.,estrangeira,0.0,Chave estrangeira para tabela de clientes. Não usar como feature (ID puro).
+orders,order_status,object,categoria_status_pedido,"Status do pedido (delivered, shipped, cancelled, etc.).",nenhuma,0.0,Boa para filtros e EDA. Em alguns cenários pode ser alvo.
+orders,order_purchase_timestamp,object,timestamp_compra,Data e hora em que o pedido foi feito pelo cliente.,nenhuma,0.0,Candidata a 'data de referência' para splits temporais. Converter para datetime depois.
+orders,order_approved_at,object,timestamp_aprovacao_pagamento,Data e hora em que o pagamento do pedido foi aprovado.,nenhuma,0.0016,Acontece após a compra → informação de futuro; não usar como feature se o modelo decide na compra.
+orders,order_delivered_carrier_date,object,timestamp_envio_transportadora,Data em que o pedido foi entregue à transportadora.,nenhuma,0.0179,"Também após a compra. Boa para análise de logística, mas é futuro → não usar como feature."
+orders,order_delivered_customer_date,object,timestamp_entrega_cliente,Data em que o pedido foi entregue ao cliente.,nenhuma,0.0298,"Futuro claro. Candidata a alvo (prazo, atraso), nunca feature na compra."
+orders,order_estimated_delivery_date,object,timestamp_estimativa_entrega,Data estimada de entrega informada ao cliente.,nenhuma,0.0,Estimativa conhecida na compra. Pode ser feature se você aceitar usar essa informação do sistema.
